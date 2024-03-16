@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<br>
+<div class="container mt-5">
+    <form id="weatherForm" method="GET" action="{% url 'index' %}" class="mb-3">
+        <div class="input-group">
+            <input type="text" name="city" id="cityInput" class="form-control" placeholder="Enter city name">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
+
+    <h2 class="mb-3">City : {{ city }}</h2>
+    <h3 class="mb-3">{{ description }}</h3>
+    <h3 class="mb-3">{{ temp }}</h3>
+    <h3 class="mb-3">{{ day }}</h3>
+    <h3 class="mb-3">{{ icon }}</h3>
+</div>
+{% endblock content %}
